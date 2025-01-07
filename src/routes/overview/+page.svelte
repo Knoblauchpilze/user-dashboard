@@ -1,16 +1,10 @@
 <script lang="ts">
-	import pageTitle from '$lib/stores/ui/pageTitle';
-
 	import { FlexContainer, StyledButton, StyledTitle } from '@totocorpsoftwareinc/frontend-toolkit';
 
-	// https://svelte.dev/blog/zero-config-type-safety
-	// https://svelte.dev/docs/kit/load#Page-data
 	let { data } = $props();
 
-	pageTitle.set(data.wepageTitle);
-
 	const labelStyle = 'font-bold px-2 text-right';
-	const fieldStyle = 'text-secondary';
+	const fieldStyle = 'text-[#2e5a88]';
 </script>
 
 <FlexContainer>

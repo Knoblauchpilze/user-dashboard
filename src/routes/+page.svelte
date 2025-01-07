@@ -3,6 +3,7 @@
 </script>
 
 <FlexContainer>
-	<StyledTitle text="Template frontend" />
-	<StyledLink text="Enter the frontend" link="/login" showAsButton={true} />
+	<StyledTitle text="User dashboard" />
+	<StyledLink text="Login" link="/login" showAsButton={true} />
+	<StyledLink text="Sign up" link="/signup" showAsButton={true} />
 </FlexContainer>
