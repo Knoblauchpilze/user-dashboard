@@ -2,10 +2,6 @@
 	import '$styles/app.css';
 	import { type Snippet } from 'svelte';
 
-	import pageTitle from '$lib/stores/ui/pageTitle';
-	import heroImage from '$lib/stores/ui/heroImage';
-	import heroContainer from '$lib/stores/ui/heroContainer';
-
 	import { HeroContainer } from '@totocorpsoftwareinc/frontend-toolkit';
 
 	interface Props {
@@ -16,13 +12,8 @@
 </script>
 
 <svelte:head>
-	<title>{$pageTitle}</title>
+	<title>{'Admin Dashboard'}</title>
 </svelte:head>
-<HeroContainer
-	width={$heroContainer.width}
-	height={$heroContainer.height}
-	bgColor={$heroImage}
-	bgOverlay={$heroContainer.color}
->
+<HeroContainer width={'w-4/12'} height={'h-3/6'}>
 	{@render children?.()}
 </HeroContainer>

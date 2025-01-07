@@ -25,17 +25,16 @@
 
 <FlexContainer>
 	<div class="fixed right-4 top-4">
-		<StyledLink text="Signup" link="/signup" />
+		<StyledLink text="Login" link="/login" />
 	</div>
 
 	<FlexContainer extensible={false} styling="h-1/5">
 		<StyledTitle text="Admin dashboard" />
-		<StyledText text="Login" />
+		<StyledText text="Sign up" />
 	</FlexContainer>
 
 	<FlexContainer extensible={false} styling="h-3/5">
-		<form method="POST" action="?/login" class="flex flex-col flex-1 justify-evenly">
-			<!-- https://stackoverflow.com/questions/62278480/add-onchange-handler-to-input-in-svelte -->
+		<form method="POST" action="?/signup" class="flex flex-col flex-1 justify-evenly">
 			<FormField label="email:" labelId="email" labelStyling="text-secondary">
 				<input
 					id="email"
@@ -45,7 +44,6 @@
 					required
 					value={form?.email ?? ''}
 					oninput={resetFormError}
-					class="text-primary"
 				/>
 			</FormField>
 			<FormField label="password:" labelId="password" labelStyling="text-secondary">
@@ -58,11 +56,10 @@
 					oninput={resetFormError}
 				/></FormField
 			>
-			<StyledButton text="Login" />
+			<StyledButton text="Sign up" />
 		</form>
 
 		{#if form?.message}
-			<!-- https://www.w3schools.com/howto/howto_js_snackbar.asp -->
 			<div class="fixed bottom-4">
 				<StyledError text={form.message} />
 			</div>
