@@ -1,4 +1,3 @@
-import { PUBLIC_API_BASE_URL } from '$env/static/public';
 import { PUBLIC_USER_API_BASE_URL } from '$env/static/public';
 import { error, redirect } from '@sveltejs/kit';
 import {
@@ -12,15 +11,6 @@ import {
 
 export function buildUserUrl(url: string): string {
 	const out = trimTrailingSlash(PUBLIC_USER_API_BASE_URL);
-
-	if (url.length === 0) {
-		return out;
-	}
-	return out + '/' + url;
-}
-
-export function buildUrl(url: string): string {
-	const out = trimTrailingSlash(PUBLIC_API_BASE_URL);
 
 	if (url.length === 0) {
 		return out;
