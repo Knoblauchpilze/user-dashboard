@@ -3,7 +3,7 @@
 </script>
 
 <FlexContainer>
-	<StyledTitle text="User dashboard" />
+	<StyledTitle text="Admin dashboard" />
 	<StyledLink text="Login" link="/login" showAsButton={true} />
 	<StyledLink text="Sign up" link="/signup" showAsButton={true} />
 </FlexContainer>
