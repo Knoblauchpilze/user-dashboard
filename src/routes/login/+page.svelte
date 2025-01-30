@@ -24,7 +24,7 @@
 </script>
 
 <FlexContainer>
-	<div class="fixed right-4 top-4">
+	<div class="fixed top-4 right-4">
 		<StyledLink text="Signup" link="/signup" />
 	</div>
 
@@ -45,7 +45,7 @@
 					required
 					value={form?.email ?? ''}
 					oninput={resetFormError}
-					class="text-primary"
+					class="bg-white"
 				/>
 			</FormField>
 			<FormField label="password:" labelId="password" labelStyling="text-secondary">
@@ -56,6 +56,7 @@
 					placeholder="Enter your password"
 					required
 					oninput={resetFormError}
+					class="bg-white"
 				/></FormField
 			>
 			<StyledButton text="Login" />
