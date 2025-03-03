@@ -12,8 +12,8 @@
 </script>
 
 <svelte:head>
-	<title>{'Admin Dashboard'}</title>
+	<title>Admin Dashboard</title>
 </svelte:head>
-<HeroContainer width={'w-4/12'} height={'h-3/6'}>
+<HeroContainer width="w-4/12" height="h-3/6">
 	{@render children?.()}
 </HeroContainer>
