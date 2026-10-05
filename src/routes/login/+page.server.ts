@@ -1,15 +1,15 @@
 import { redirect, fail } from '@sveltejs/kit';
 // https://learn.svelte.dev/tutorial/lib
-import { resetSessionCookies, setSessionCookies } from '$lib/cookies';
-import { loginUser } from '$lib/services/sessions';
-import { ApiKeyResponseDto } from '$lib/communication/api/apiKeyResponseDto';
+import { resetSessionCookies, setSessionCookies } from '#lib/cookies';
+import { loginUser } from '#lib/services/sessions';
+import { ApiKeyResponseDto } from '#lib/communication/api/apiKeyResponseDto';
 import {
 	getHttpStatusCodeFromApiFailure,
 	HttpStatus,
 	parseApiResponseAsSingleValue,
 	tryGetFailureReason
 } from '@totocorpsoftwareinc/frontend-toolkit';
-import { getErrorMessageFromApiResponse } from '$lib/rest/api';
+import { getErrorMessageFromApiResponse } from '#lib/rest/api';
 
 export async function load({ cookies }) {
 	resetSessionCookies(cookies);

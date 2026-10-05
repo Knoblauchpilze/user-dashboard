@@ -1,12 +1,12 @@
 import { fail, redirect } from '@sveltejs/kit';
-import { resetSessionCookies } from '$lib/cookies';
-import { createUser } from '$lib/services/users';
+import { resetSessionCookies } from '#lib/cookies';
+import { createUser } from '#lib/services/users';
 import {
 	getHttpStatusCodeFromApiFailure,
 	HttpStatus,
 	tryGetFailureReason
 } from '@totocorpsoftwareinc/frontend-toolkit';
-import { getErrorMessageFromApiResponse } from '$lib/rest/api';
+import { getErrorMessageFromApiResponse } from '#lib/rest/api';
 
 export async function load({ cookies }) {
 	resetSessionCookies(cookies);
