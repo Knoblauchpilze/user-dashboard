@@ -43,6 +43,8 @@ jobs:
       - name: Run tests with coverage
         run: |
           npm run coverage
+        env:
+          PUBLIC_USER_API_BASE_URL: http://user-service:80/v1/users
       - name: Upload coverage to Codecov
         if: ${{ github.actor != 'dependabot[bot]' }}
         uses: codecov/codecov-action@v7

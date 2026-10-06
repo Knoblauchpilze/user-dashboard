@@ -1,4 +1,4 @@
-import { PUBLIC_USER_API_BASE_URL } from '$env/static/public';
+import { PUBLIC_USER_API_BASE_URL } from '$app/env/public';
 import { error, redirect } from '@sveltejs/kit';
 import {
 	ApiFailure,

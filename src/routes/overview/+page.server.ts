@@ -1,10 +1,10 @@
-import { logoutUser } from '$lib/services/sessions';
-import { getUser } from '$lib/services/users';
-import { handleApiError, redirectToLoginIfNeeded } from '$lib/rest/api';
-import { loadSessionCookiesOrRedirectToLogin } from '$lib/cookies';
+import { logoutUser } from '#lib/services/sessions';
+import { getUser } from '#lib/services/users';
+import { handleApiError, redirectToLoginIfNeeded } from '#lib/rest/api';
+import { loadSessionCookiesOrRedirectToLogin } from '#lib/cookies';
 import { HttpStatus, parseApiResponseAsSingleValue } from '@totocorpsoftwareinc/frontend-toolkit';
-import { UserResponseDto } from '$lib/communication/api/userResponseDto';
-import { userResponseDtoToUserUiDto } from '$lib/converters/userConverter';
+import { UserResponseDto } from '#lib/communication/api/userResponseDto';
+import { userResponseDtoToUserUiDto } from '#lib/converters/userConverter';
 import { error, redirect } from '@sveltejs/kit';
 
 export async function load({ cookies }) {
